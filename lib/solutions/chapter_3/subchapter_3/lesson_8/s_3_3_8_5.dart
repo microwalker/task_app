@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-bool isPalindrome(String input) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+bool isPalindrome(String word) {
+  String reversedWord = "";
+  for(int i=word.length;i>0;i--) {
+    reversedWord += word[i-1];
+  }
+  
+  return reversedWord.toLowerCase() == word.toLowerCase();
 }
 
 class S3385 extends StatefulWidget {

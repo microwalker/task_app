@@ -1,8 +1,14 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 FormattedTime formatSeconds(int seconds) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+    List<int> hms = [0,0,0];
+    for(int e=2; e>=0; e--) {
+      int _hms = seconds ~/ pow(60, e);
+      seconds -= _hms * pow(60, e).toInt();
+      hms[e] += _hms; // "$_hms${e>0?":":" (HH:MM:SS)"}"; 
+    } 
+    return FormattedTime(hours: hms[2], minutes: hms[1], seconds: hms[0]); 
 }
 
 class FormattedTime {
