@@ -6,8 +6,12 @@ import 'package:flutter/material.dart';
 /// This functions tries to hack a 4 digit PIN.
 /// It returns the PIN as a string.
 String hackPin() {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  for(int i=0; i<10000; i++) {
+    String pin = i.toString().padLeft(4,"0");
+    if(_isPinCorrect(pin))
+      return pin;
+  }
+  return "failed!";
 }
 
 // ignore: unused_element
