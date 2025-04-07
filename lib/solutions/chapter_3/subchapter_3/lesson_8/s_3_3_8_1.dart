@@ -3,12 +3,17 @@ import 'package:flutter/material.dart';
 
 int reverseNumber(int number) {
   int maxDez = 0;
-  while(number % 10 == 0) number ~/= 10;
-  while(number > pow(10, maxDez + 1)) maxDez++;
+  while(number % 10 == 0) {
+    number ~/= 10;
+  }
+  while(number > pow(10, maxDez + 1)) {
+    maxDez++;
+  }
 
   num erg = 0;
-  for(int p=0; p<=maxDez; p++) 
+  for(int p=0; p<=maxDez; p++) {
     erg += ((number ~/ pow(10, p)) % 10) * pow(10,maxDez - p);
+  }
   return erg.toInt();
 }
 

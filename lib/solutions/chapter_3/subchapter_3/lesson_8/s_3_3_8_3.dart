@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 FormattedTime formatSeconds(int seconds) {
     List<int> hms = [0,0,0];
     for(int e=2; e>=0; e--) {
-      int _hms = seconds ~/ pow(60, e);
-      seconds -= _hms * pow(60, e).toInt();
-      hms[e] += _hms; // "$_hms${e>0?":":" (HH:MM:SS)"}"; 
+      int hms0 = seconds ~/ pow(60, e);
+      seconds -= hms0 * pow(60, e).toInt();
+      hms[e] += hms0; // "$_hms${e>0?":":" (HH:MM:SS)"}"; 
     } 
     return FormattedTime(hours: hms[2], minutes: hms[1], seconds: hms[0]); 
 }

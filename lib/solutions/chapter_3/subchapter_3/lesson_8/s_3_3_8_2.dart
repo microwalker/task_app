@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 bool isPrime(int input) {
     bool erg = true;
-    for(int d=2;d<input;d++)
-      if(input % d == 0)
+    for(int d=2;d<input;d++) {
+      if(input % d == 0) {
         return false;
+    }
+      }
     return input >= 2 && erg;
 }
 

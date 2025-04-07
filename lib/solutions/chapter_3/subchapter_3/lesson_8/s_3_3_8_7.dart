@@ -8,8 +8,9 @@ import 'package:flutter/material.dart';
 String hackPin() {
   for(int i=0; i<10000; i++) {
     String pin = i.toString().padLeft(4,"0");
-    if(_isPinCorrect(pin))
+    if(_isPinCorrect(pin)) {
       return pin;
+    }
   }
   return "failed!";
 }

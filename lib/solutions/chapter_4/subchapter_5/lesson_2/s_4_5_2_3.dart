@@ -16,10 +16,10 @@ class MyNameWidget extends StatefulWidget {
 }
 
 class _MyNameWidgetState extends State<MyNameWidget> {
-  String State = "";
+  String state = "";
   
   @override
   Widget build(BuildContext context) {
-    return Column(spacing: 16, children: [ElevatedButton(onPressed: () { State = "Björg"; setState(() { _MyNameWidgetState(); }); }, child: Text("Name anzeigen")), Text(State)]);
+    return Column(spacing: 16, children: [ElevatedButton(onPressed: () { state = "Björg"; setState(() { _MyNameWidgetState(); }); }, child: Text("Name anzeigen")), Text(state)]);
   }
 }

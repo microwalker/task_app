@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 int countVowels(String input, [bool withUmlauts = false]) {
-  return  new RegExp(r'[aeiou'+(withUmlauts?'äöü':'')+']').allMatches(input.toLowerCase()).length;  // Lösung hier einfügen
+  // ignore: prefer_interpolation_to_compose_strings
+  return  RegExp(r'[aeiou'+(withUmlauts?'äöü':'')+']').allMatches(input.toLowerCase()).length;  // Lösung hier einfügen
 }
 
 class S3384 extends StatefulWidget {
