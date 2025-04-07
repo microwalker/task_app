@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 
 int multiplyAdvanced(int a, int b) {
   int prod = 0;
-  if(a==0) 
-    return 0;
+  if(a==0) {
+    return 0; }
   
-  for(int i=0;i<b.abs();i++) prod+=a.abs();
+  for(int i=0;i<b.abs();i++) { prod+=a.abs(); }
   return a.isNegative ^ b.isNegative ? -prod : prod;
 }
 
