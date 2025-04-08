@@ -20,6 +20,6 @@ class _MyNameWidgetState extends State<MyNameWidget> {
   
   @override
   Widget build(BuildContext context) {
-    return Column(spacing: 16, children: [ElevatedButton(onPressed: () { state = "Björg"; setState(() { _MyNameWidgetState(); }); }, child: Text("Name anzeigen")), Text(state)]);
+    return Column(spacing: 16, children: [ElevatedButton(onPressed: () => setState(() => state = "Björg") , child: Text("Name anzeigen")), Text(state)]);
   }
 }
