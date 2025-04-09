@@ -21,11 +21,14 @@ class _ShowHideNameWidgetState extends State<ShowHideNameWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(spacing: 16, children: [ElevatedButton(onPressed: () { 
-      hidden = !hidden; 
-      buttonText = hidden ? "Name anzeigen" : "Name verstecken";
-      name = hidden ? "" : "Björg";
-      setState( () => _ShowHideNameWidgetState() ); 
-    }, child: Text(buttonText)), Text(name)]);
+    return Column(spacing: 16, 
+      children: [
+        ElevatedButton(onPressed: () { 
+          hidden = !hidden; 
+          buttonText = hidden ? "Name anzeigen" : "Name verstecken";
+          name = hidden ? "" : "Björg";
+          setState( () => _ShowHideNameWidgetState() ); }, 
+        child: Text(buttonText)), 
+        if(!hidden) Text(name)]);
   }
 }
